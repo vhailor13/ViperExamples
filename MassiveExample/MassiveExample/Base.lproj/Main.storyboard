@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MassiveExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="origin.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="feb-NI-OAZ">
+                                <rect key="frame" x="36" y="28" width="303" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="ZXy-CQ-rti"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abf-Mm-cjd">
+                                <rect key="frame" x="36" y="436" width="303" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRb-C1-XB0">
+                                <rect key="frame" x="130" y="444" width="115" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="c3b-NT-UxH"/>
+                                    <constraint firstAttribute="width" constant="115" id="zdU-EZ-UOQ"/>
+                                </constraints>
+                                <state key="normal" title="Apply filter"/>
+                                <connections>
+                                    <action selector="onApplyFilter" destination="BYZ-38-t0r" eventType="touchUpInside" id="63Y-c0-exc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="abf-Mm-cjd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="05I-eu-f2M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="feb-NI-OAZ" secondAttribute="trailing" constant="20" id="Khd-pW-Jjf"/>
+                            <constraint firstItem="feb-NI-OAZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Moa-xy-Gn0"/>
+                            <constraint firstItem="nRb-C1-XB0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dIc-Pj-Ahj"/>
+                            <constraint firstItem="nRb-C1-XB0" firstAttribute="top" secondItem="abf-Mm-cjd" secondAttribute="bottom" constant="8" id="kbU-i2-0MU"/>
+                            <constraint firstItem="abf-Mm-cjd" firstAttribute="top" secondItem="feb-NI-OAZ" secondAttribute="bottom" constant="8" id="mzo-NK-U5W"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="abf-Mm-cjd" secondAttribute="trailing" constant="20" id="nQI-jZ-8j8"/>
+                            <constraint firstItem="feb-NI-OAZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="wCu-Lr-VNK"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="lastModifiedLabel" destination="abf-Mm-cjd" id="kNb-18-MCa"/>
+                        <outlet property="photoView" destination="feb-NI-OAZ" id="miE-2f-iHu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="origin.jpg" width="460" height="692"/>
+    </resources>
+</document>
